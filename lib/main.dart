@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:starbucks/demos/star_system_demo.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const StarbucksApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class StarbucksApp extends StatelessWidget {
+  const StarbucksApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,24 +15,25 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
-      home: const MyHomePage(),
+      home: const StarbucksDemoPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class StarbucksDemoPage extends StatefulWidget {
+  const StarbucksDemoPage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<StarbucksDemoPage> createState() => _StarbucksDemoPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _StarbucksDemoPageState extends State<StarbucksDemoPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: SizedBox(),
+        child: StarSystemDemo(),
       ),
     );
   }
